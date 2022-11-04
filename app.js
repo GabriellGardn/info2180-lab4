@@ -17,21 +17,24 @@ window.onload = function()
       httpRequest.send();
     });
   
+
     function heroList() 
     {
-      if (httpRequest.readyState === XMLHttpRequest.DONE) 
-      {
-        if (httpRequest.status === 200) 
+        if (httpRequest.readyState === XMLHttpRequest.DONE) 
         {
-            let response = httpRequest.responseText;
-            alert(response);
+            
+            if (httpRequest.status === 200) 
+            {
+                
+                let response = httpRequest.responseText;
+                alert(response);
 
-        } 
-        else 
-        {
-          alert('There was a problem with the request.');
+            } 
+            else 
+            {
+                alert('There was a problem with the request.');
+            }
         }
-      }
     }
-  
+      
 };

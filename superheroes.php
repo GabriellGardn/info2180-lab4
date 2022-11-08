@@ -65,8 +65,31 @@ $superheroes = [
 
 ?>
 
+
 <ul>
 <?php foreach ($superheroes as $superhero): ?>
   <li><?= $superhero['alias']; ?></li>
 <?php endforeach; ?>
 </ul>
+
+
+<?php $query = $_REQUEST["query"]; ?>
+
+<?php
+
+$res = "";
+
+ if ($query !== "") 
+ {
+    foreach($superheroes as $superhero) 
+    {
+        $res = $superhero['alias'];
+        $res = $superhero['name'];
+        $res = $superhero['biography'];
+    }
+}
+echo $res === "" ? "no suggestion" : $hint;
+  
+?>
+
+    

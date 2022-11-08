@@ -1,6 +1,7 @@
 window.onload = function() 
 {
 
+    
     var searchBtn = document.querySelector('#searchBtn');
     var httpRequest;
   
@@ -16,7 +17,6 @@ window.onload = function()
       httpRequest.open('GET', url);
       httpRequest.send();
     });
-  
 
     function heroList() 
     {
@@ -36,5 +36,63 @@ window.onload = function()
             }
         }
     }
+    
+
+
+
+
+
+
+      const searchResult = document.getElementById('result');
+      let heroData = [];
       
+
+      const searching = async () => 
+      {
+          try 
+          {
+              const res = await fetch('http://localhost/info2180-lab4/superheroes.php');
+              superhero = await res.json();
+              heroInfo(superhero);
+          } 
+          catch (err) 
+          {
+              console.error(err);
+          }
+      };
+      
+      const heroInfo = (char) => 
+      {
+          const htmlString = char
+
+              .map((character) => 
+              {
+                  return `
+                  
+                    <h3>${character.alias}</h3>
+                    <h4>${character.name}</h4>
+                    <p>${character.biography}</p>
+                  
+              `;
+              })
+              .join('');
+          result.innerHTML = htmlString;
+      };
+      
+      searching();
+        
+
+    
+        
+    
+
+    
+  
+
+
+
+
+
+    
+
 };

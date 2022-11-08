@@ -1,0 +1,59 @@
+.searchHeader
+{
+    background-color: rgb(242, 230, 255);
+    
+    padding: 30px;
+}
+
+
+
+
+body 
+{
+    font-family: sans-serif;
+    background-color: rgb(250, 225, 253);
+}
+
+
+
+h1 
+{
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: rgb(20, 6, 34);
+    font-family: 'Trebuchet MS', 'sans-serif';
+}
+
+
+.btn
+{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 10px;
+    height: 40px;
+    width: 5%;
+    font-size: medium;
+}
+
+#searchBar 
+{
+    width: 40%;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid #ffddfd;
+    padding: 5px 10px;
+    font-size: 12px;
+    float: left;
+    font-size: medium;
+}
+
+#result
+{
+    font-size: 40px;
+    color: rgb(20, 6, 34);
+    font-family: 'Trebuchet MS', 'sans-serif';
+    padding: 30px;
+}
+
+
